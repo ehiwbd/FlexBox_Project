@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="crossword.css" />
+		<title>Crossword</title>
+	</head>
+
+	<body>
+		<div class="game-container">
+			<div class="puzzle-grid">
+				<h1 style="position: absolute; top: 2px">Crossword</h1>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">1</span></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">2</span></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">3</span></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">7</span></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">5 6</span></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">9</span></div>
+				</div>
+				<div class="row">
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+				</div>
+				<div class="row">
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+				</div>
+				<div class="row">
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">8</span></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+				</div>
+				<div class="row">
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell"><input type="text" maxlength="1" /></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell"><input type="text" maxlength="1" /><span class="number">4</span></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+				<div class="row">
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+					<div class="cell inactive"></div>
+				</div>
+			</div>
+
+			<div class="clues">
+				<h2>Вопросы и ответы</h2>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Номер вопроса</th>
+							<th>Навигация</th>
+							<th>Вопрос</th>
+							<th>Ответ</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>По горизонтали</td>
+							<td>Свойство для выравнивания элементов по главной оси</td>
+							<td>
+								<button id="show-answers-btn1">Показать ответ</button>
+								<div class="h1">justify</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>По вертикали</td>
+							<td>Значение justify-content для равномерного распределения</td>
+							<td>
+								<button id="show-answers-btn2">Показать ответ</button>
+								<div class="h2">space</div>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>По вертикали</td>
+							<td>Короткая запись для flex-grow, flex-shrink и flex-basis</td>
+							<td>
+								<button id="show-answers-btn3">Показать ответ</button>
+								<div class="h3">flex</div>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>По вертикали</td>
+							<td>Свойство для определения направления главной оси</td>
+							<td>
+								<button id="show-answers-btn4">Показать ответ</button>
+								<div class="h4">direction</div>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>По вертикали</td>
+							<td>Значение flex-direction для вертикального расположения</td>
+							<td>
+								<button id="show-answers-btn5">Показать ответ</button>
+								<div class="h5">column</div>
+							</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>По горизонтали</td>
+							<td>Значение свойства align-items для выравнивания по центру</td>
+							<td>
+								<button id="show-answers-btn6">Показать ответ</button>
+								<div class="h6">center</div>
+							</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>По горизонтали</td>
+							<td>Свойство для выравнивания элементов по поперечной оси</td>
+							<td>
+								<button id="show-answers-btn7">Показать ответ</button>
+								<div class="h7">align</div>
+							</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>По горизонтали</td>
+							<td>Значение flex-wrap для переноса элементов</td>
+							<td>
+								<button id="show-answers-btn8">Показать ответ</button>
+								<div class="h8">wrap</div>
+							</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>По вертикали</td>
+							<td>Свойство для управления переносом элементов</td>
+							<td>
+								<button id="show-answers-btn9">Показать ответ</button>
+								<div class="h9">wrap</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Добавленные задания -->
+		<section class="tasks">
+			<h2>Задания по Flexbox</h2>
+			
+			<div class="task">
+				<h3>Задание 1: Равные промежутки между элементами</h3>
+				<button class="toggle-instructions" data-target="task1-instructions">Показать инструкцию</button>
+				<div class="instructions" id="task1-instructions">
+					<p>Создайте flex-контейнер с пятью элементами и настройте его так, чтобы элементы располагались горизонтально с равными промежутками между ними, но без отступов от краев контейнера.</p>
+					<p><strong>Подсказка:</strong> Используйте свойство <code>justify-content: space-between</code>.</p>
+				</div>
+				<div class="flex-example" id="task1">
+					<div class="flex-item">1</div>
+					<div class="flex-item">2</div>
+					<div class="flex-item">3</div>
+					<div class="flex-item">4</div>
+					<div class="flex-item">5</div>
+				</div>
+			</div>
+
+			<div class="task">
+				<h3>Задание 2: Вертикальное центрирование</h3>
+				<button class="toggle-instructions" data-target="task2-instructions">Показать инструкцию</button>
+				<div class="instructions" id="task2-instructions">
+					<p>Создайте flex-контейнер с тремя элементами разной высоты и настройте его так, чтобы элементы располагались вертикально (в столбец) и были выровнены по центру как по горизонтали, так и по вертикали внутри контейнера высотой 300px.</p>
+					<p><strong>Подсказка:</strong> Используйте <code>flex-direction: column</code>, <code>justify-content: center</code> и <code>align-items: center</code>.</p>
+				</div>
+				<div class="flex-example" id="task2">
+					<div class="flex-item" style="height: 50px;">1</div>
+					<div class="flex-item" style="height: 80px;">2</div>
+					<div class="flex-item" style="height: 60px;">3</div>
+				</div>
+			</div>
+
+			<div class="task">
+				<h3>Задание 3: Обратный порядок с переносом</h3>
+				<button class="toggle-instructions" data-target="task3-instructions">Показать инструкцию</button>
+				<div class="instructions" id="task3-instructions">
+					<p>Создайте flex-контейнер с шестью элементами и настройте его так, чтобы элементы отображались в обратном порядке (справа налево) и переносились на новую строку, если не помещаются в одну линию. Установите минимальную ширину элементов в 100px.</p>
+					<p><strong>Подсказка:</strong> Используйте <code>flex-direction: row-reverse</code> и <code>flex-wrap: wrap</code>.</p>
+				</div>
+				<div class="flex-example" id="task3">
+					<div class="flex-item">1</div>
+					<div class="flex-item">2</div>
+					<div class="flex-item">3</div>
+					<div class="flex-item">4</div>
+					<div class="flex-item">5</div>
+					<div class="flex-item">6</div>
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;800&display=swap');
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.game-container {
+			padding: 10px;
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+			min-height: 100vh;
+			align-items: center;
+		}
+
+		.puzzle-grid {
+			display: grid;
+			grid-template-rows: repeat(13, 40px);
+		}
+
+		.row {
+			display: grid;
+			grid-template-columns: repeat(13, 40px);
+			box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+		}
+
+		.cell {
+			width: 40px;
+			height: 40px;
+			background-color: white;
+			border: 1px solid green;
+		}
+
+		.inactive {
+			background-color: green;
+		}
+
+		h1 {
+			text-align: center;
+			color: green;
+			font-size: 2.2rem;
+		}
+
+		.number {
+			position: relative;
+			font-weight: 300;
+			color: #000;
+			bottom: 45px;
+			font-size: small;
+			left: 3px;
+			z-index: 10;
+		}
+
+		input:focus {
+			outline: none;
+			background-color: #bddebe;
+			width: 37.5px;
+			height: 37.5px;
+		}
+
+		input {
+			display: block;
+			position: relative;
+			font-size: 16px;
+			text-align: center;
+			height: 40px;
+			width: 40px;
+			background-color: transparent;
+			border: none;
+			z-index: 1;
+		}
+
+		.clues {
+			max-width: 40%;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			color: green;
+			text-align: center;
+		}
+
+		#clues-list {
+			line-height: 2.5rem;
+			font-size: 1rem;
+			padding: 10px;
+		}
+
+		#clues-list li {
+			gap: 20px;
+			padding: 0;
+			display: flex;
+			text-align: center;
+			list-style-position: inside;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		button {
+			display: block;
+			padding: 5px;
+			background-color: green;
+			color: #fff;
+			border-radius: 5px;
+			font-family: 'Poppins', sans-serif;
+			border: 2px solid transparent;
+		}
+
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6,
+		.h7,
+		.h8,
+		.h9,
+		.h10,
+		.h11 {
+			visibility: hidden;
+			color: green;
+		}
+
+		#show-answers-btn1:hover ~ .h1 {
+			visibility: visible;
+		}
+		#show-answers-btn2:hover ~ .h2 {
+			visibility: visible;
+		}
+		#show-answers-btn3:hover ~ .h3 {
+			visibility: visible;
+		}
+		#show-answers-btn4:hover ~ .h4 {
+			visibility: visible;
+		}
+		#show-answers-btn5:hover ~ .h5 {
+			visibility: visible;
+		}
+		#show-answers-btn6:hover ~ .h6 {
+			visibility: visible;
+		}
+		#show-answers-btn7:hover ~ .h7 {
+			visibility: visible;
+		}
+		#show-answers-btn8:hover ~ .h8 {
+			visibility: visible;
+		}
+		#show-answers-btn9:hover ~ .h9 {
+			visibility: visible;
+		}
+		#show-answers-btn10:hover ~ .h10 {
+			visibility: visible;
+		}
+
+		#show-answers-btn11:hover ~ #show-answers-btn11 {
+			visibility: hidden;
+		}
+
+		button:hover {
+			background-color: #fff;
+			border: 2px solid green;
+			color: green;
+			cursor: pointer;
+			transition: all 0.2s ease;
+		}
+
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+
+		/* Стили для заданий */
+		.tasks {
+			width: 80%;
+			margin: 20px auto;
+			padding: 20px;
+		}
+
+		.task {
+			margin-bottom: 30px;
+		}
+
+		.task h3 {
+			color: green;
+			margin-bottom: 10px;
+		}
+
+		.flex-example {
+			display: flex;
+			background-color: #f0f0f0;
+			padding: 10px;
+			border: 1px solid green;
+			border-radius: 5px;
+			min-height: 100px;
+		}
+
+		#task1 {
+			justify-content: space-between;
+		}
+
+		#task2 {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 300px;
+		}
+
+		#task3 {
+			flex-direction: row-reverse;
+			flex-wrap: wrap;
+		}
+
+		#task3 .flex-item {
+			min-width: 100px;
+		}
+
+		.flex-item {
+			background-color: green;
+			color: white;
+			padding: 10px;
+			margin: 5px;
+			text-align: center;
+			border-radius: 5px;
+		}
+
+		.instructions {
+			display: none;
+			background-color: #e0f7e0;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 10px 0;
+		}
+
+		.toggle-instructions {
+			margin-bottom: 10px;
+		}
+
+		@media screen and (max-width: 980px) {
+			.game-container {
+				flex-direction: column;
+				align-items: center;
+				padding-top: 70px;
+				gap: 30px;
+			}
+
+			.puzzle-grid {
+				display: grid;
+				grid-template-rows: repeat(13, 40px);
+			}
+
+			.row {
+				display: grid;
+				grid-template-columns: repeat(13, 40px);
+			}
+
+			.cell {
+				width: 40px;
+				height: 40px;
+			}
+
+			input {
+				width: 40px;
+				height: 40px;
+				font-size: 1rem;
+			}
+
+			input:focus {
+				height: 40px;
+				width: 40px;
+			}
+
+			.number {
+				bottom: 47px;
+				font-size: 0.8rem;
+			}
+
+			.clues {
+				max-width: 100%;
+			}
+
+			.tasks {
+				width: 90%;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			.game-container {
+				flex-direction: column;
+				align-items: center;
+				padding-top: 70px;
+				gap: 30px;
+			}
+
+			.puzzle-grid {
+				display: grid;
+				grid-template-rows: repeat(13, 27px);
+			}
+
+			.row {
+				display: grid;
+				grid-template-columns: repeat(13, 27px);
+			}
+
+			.cell {
+				width: 27px;
+				height: 27px;
+			}
+
+			input {
+				width: 25px;
+				height: 25px;
+				font-size: 0.5rem;
+			}
+
+			input:focus {
+				height: 27px;
+				width: 27px;
+			}
+
+			.number {
+				bottom: 35px;
+				font-size: 0.5rem;
+			}
+
+			.clues {
+				max-width: 100%;
+			}
+
+			.tasks {
+				width: 95%;
+			}
+
+			.flex-item {
+				padding: 5px;
+				margin: 3px;
+			}
+		}
+	</style>
+
+	<script>
+		// Переключение видимости инструкций
+		document.querySelectorAll('.toggle-instructions').forEach(button => {
+			button.addEventListener('click', () => {
+				const targetId = button.getAttribute('data-target');
+				const instructions = document.getElementById(targetId);
+				if (instructions.style.display === 'block') {
+					instructions.style.display = 'none';
+					button.textContent = 'Показать инструкцию';
+				} else {
+					instructions.style.display = 'block';
+					button.textContent = 'Скрыть инструкцию';
+				}
+			});
+		});
+	</script>
+</html>

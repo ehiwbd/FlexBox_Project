@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+		<title>Интерактивный учебник по Flexbox</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>Интерактивный учебник по Flexbox</h1>
+				<p>
+					Создавайте современные, гибкие и отзывчивые макеты с помощью Flexbox
+				</p>
+			</div>
+		</header>
+
+		<div class="container">
+			<section class="section fade-in">
+				<h2>Что такое Flexbox?</h2>
+				<p>
+					Flexbox (Flexible Box Layout) — это модуль макета CSS, разработанный
+					для облегчения создания гибких, отзывчивых макетов без использования
+					плавающих элементов или позиционирования. Он особенно полезен для
+					компонентов пользовательского интерфейса и небольших макетов.
+				</p>
+				<p>Flexbox состоит из двух основных компонентов:</p>
+				<ul>
+					<li>
+						<strong>Flex-контейнер</strong> — родительский элемент, к которому
+						применяется свойство <code>display: flex</code>
+					</li>
+					<li>
+						<strong>Flex-элементы</strong> — дочерние элементы, размещенные
+						внутри flex-контейнера
+					</li>
+				</ul>
+			</section>
+
+			<section class="section fade-in">
+				<h2>Основы Flexbox: контейнеры и элементы</h2>
+
+				<p>
+					Чтобы использовать Flexbox, нужно сначала создать flex-контейнер,
+					применив к элементу свойство <code>display: flex</code> или
+					<code>display: inline-flex</code>.
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Пример flex-контейнера:</div>
+					<div class="flex-example" id="basic-demo">
+						<div class="flex-item">1</div>
+						<div class="flex-item">2</div>
+						<div class="flex-item">3</div>
+						<div class="flex-item">4</div>
+					</div>
+					<div class="controls">
+						<button
+							onclick="toggleFlexDisplay('basic-demo', 'flex')"
+							class="active"
+						>
+							display: flex
+						</button>
+						<button onclick="toggleFlexDisplay('basic-demo', 'block')">
+							display: block
+						</button>
+					</div>
+					<div>
+						<p>
+							Текущее значение:
+							<span class="property-value" id="basic-demo-value">flex</span>
+						</p>
+					</div>
+				</div>
+
+				<h3>Свойства flex-контейнера:</h3>
+				<ul>
+					<li><code>display</code>: определяет элемент как flex-контейнер</li>
+					<li>
+						<code>flex-direction</code>: определяет направление flex-элементов
+					</li>
+					<li>
+						<code>flex-wrap</code>: определяет, должны ли flex-элементы
+						переноситься
+					</li>
+					<li>
+						<code>justify-content</code>: выравнивает flex-элементы по главной
+						оси
+					</li>
+					<li>
+						<code>align-items</code>: выравнивает flex-элементы по поперечной
+						оси
+					</li>
+					<li><code>align-content</code>: выравнивает строки flex-элементов</li>
+				</ul>
+
+				<h3>Свойства flex-элементов:</h3>
+				<ul>
+					<li><code>flex-grow</code>: определяет, как элемент может расти</li>
+					<li>
+						<code>flex-shrink</code>: определяет, как элемент может уменьшаться
+					</li>
+					<li><code>flex-basis</code>: задает начальный размер элемента</li>
+					<li>
+						<code>flex</code>: сокращенная запись для flex-grow, flex-shrink и
+						flex-basis
+					</li>
+					<li>
+						<code>align-self</code>: переопределяет выравнивание для конкретного
+						элемента
+					</li>
+					<li><code>order</code>: изменяет порядок элементов</li>
+				</ul>
+			</section>
+
+			<section class="section fade-in">
+				<h2>Свойство flex-direction</h2>
+				<p>
+					Свойство <code>flex-direction</code> определяет направление, в котором
+					flex-элементы размещаются в flex-контейнере. Оно устанавливает главную
+					ось контейнера.
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Интерактивный пример flex-direction:</div>
+					<div class="flex-example" id="direction-demo">
+						<div class="flex-item">1</div>
+						<div class="flex-item">2</div>
+						<div class="flex-item">3</div>
+						<div class="flex-item">4</div>
+					</div>
+					<div class="controls">
+						<button onclick="changeFlexDirection('row')" class="active">
+							row
+						</button>
+						<button onclick="changeFlexDirection('row-reverse')">
+							row-reverse
+						</button>
+						<button onclick="changeFlexDirection('column')">column</button>
+						<button onclick="changeFlexDirection('column-reverse')">
+							column-reverse
+						</button>
+					</div>
+					<div>
+						<p>
+							Текущее значение:
+							<span class="property-value" id="direction-value">row</span>
+						</p>
+					</div>
+				</div>
+
+				<h3>Возможные значения:</h3>
+				<ul>
+					<li><code>row</code> (по умолчанию): слева направо</li>
+					<li><code>row-reverse</code>: справа налево</li>
+					<li><code>column</code>: сверху вниз</li>
+					<li><code>column-reverse</code>: снизу вверх</li>
+				</ul>
+			</section>
+
+			<section class="section fade-in">
+				<h2>Свойство justify-content</h2>
+				<p>
+					Свойство <code>justify-content</code> определяет, как браузер
+					распределяет пространство между и вокруг flex-элементов вдоль главной
+					оси контейнера.
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Интерактивный пример justify-content:</div>
+					<div class="flex-example" id="justify-demo">
+						<div class="flex-item">1</div>
+						<div class="flex-item">2</div>
+						<div class="flex-item">3</div>
+					</div>
+					<div class="controls">
+						<button onclick="changeJustifyContent('flex-start')" class="active">
+							flex-start
+						</button>
+						<button onclick="changeJustifyContent('flex-end')">flex-end</button>
+						<button onclick="changeJustifyContent('center')">center</button>
+						<button onclick="changeJustifyContent('space-between')">
+							space-between
+						</button>
+						<button onclick="changeJustifyContent('space-around')">
+							space-around
+						</button>
+						<button onclick="changeJustifyContent('space-evenly')">
+							space-evenly
+						</button>
+					</div>
+					<div>
+						<p>
+							Текущее значение:
+							<span class="property-value" id="justify-value">flex-start</span>
+						</p>
+					</div>
+				</div>
+
+				<h3>Возможные значения:</h3>
+				<ul>
+					<li>
+						<code>flex-start</code> (по умолчанию): элементы прижимаются к
+						началу контейнера
+					</li>
+					<li>
+						<code>flex-end</code>: элементы прижимаются к концу контейнера
+					</li>
+					<li><code>center</code>: элементы центрируются по главной оси</li>
+					<li>
+						<code>space-between</code>: равномерно распределяет пространство
+						между элементами
+					</li>
+					<li>
+						<code>space-around</code>: равномерно распределяет пространство
+						вокруг элементов
+					</li>
+					<li>
+						<code>space-evenly</code>: равномерно распределяет пространство
+						между всеми элементами и краями контейнера
+					</li>
+				</ul>
+			</section>
+
+			<section class="section fade-in">
+				<h2>Свойство align-items</h2>
+				<p>
+					Свойство <code>align-items</code> определяет, как flex-элементы
+					располагаются вдоль поперечной оси контейнера.
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Интерактивный пример align-items:</div>
+					<div class="flex-example" id="align-demo" style="min-height: 250px">
+						<div class="flex-item">1</div>
+						<div class="flex-item" style="height: 80px">2</div>
+						<div class="flex-item" style="height: 120px">3</div>
+					</div>
+					<div class="controls">
+						<button onclick="changeAlignItems('stretch')" class="active">
+							stretch
+						</button>
+						<button onclick="changeAlignItems('flex-start')">flex-start</button>
+						<button onclick="changeAlignItems('flex-end')">flex-end</button>
+						<button onclick="changeAlignItems('center')">center</button>
+						<button onclick="changeAlignItems('baseline')">baseline</button>
+					</div>
+					<div>
+						<p>
+							Текущее значение:
+							<span class="property-value" id="align-value">stretch</span>
+						</p>
+					</div>
+				</div>
+
+				<h3>Возможные значения:</h3>
+				<ul>
+					<li>
+						<code>stretch</code> (по умолчанию): растягивает элементы, чтобы
+						заполнить контейнер
+					</li>
+					<li>
+						<code>flex-start</code>: элементы размещаются в начале поперечной
+						оси
+					</li>
+					<li>
+						<code>flex-end</code>: элементы размещаются в конце поперечной оси
+					</li>
+					<li><code>center</code>: элементы центрируются по поперечной оси</li>
+					<li>
+						<code>baseline</code>: элементы выравниваются по базовой линии
+						текста
+					</li>
+				</ul>
+			</section>
+
+			<section class="section fade-in">
+				<h2>Примеры создания гибких макетов</h2>
+
+				<h3>Пример 1: Навигационное меню</h3>
+				<p>
+					Использование Flexbox для создания горизонтального навигационного
+					меню:
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Навигационное меню:</div>
+					<div
+						id="nav-menu"
+						style="
+							display: flex;
+							background-color: var(--dark);
+							padding: 15px;
+							border-radius: 8px;
+						"
+					>
+						<div style="margin-right: auto; color: white; font-weight: bold">
+							Логотип
+						</div>
+						<div style="display: flex; gap: 20px">
+							<div style="color: white; cursor: pointer">Главная</div>
+							<div style="color: white; cursor: pointer">О нас</div>
+							<div style="color: white; cursor: pointer">Услуги</div>
+							<div style="color: white; cursor: pointer">Контакты</div>
+						</div>
+					</div>
+					<div class="controls">
+						<button onclick="toggleNavMenu('space-between')">
+							space-between
+						</button>
+						<button onclick="toggleNavMenu('default')" class="active">
+							С отступом справа
+						</button>
+					</div>
+				</div>
+
+				<h3>Пример 2: Карточки товаров</h3>
+				<p>
+					Использование Flexbox для создания адаптивной сетки карточек товаров:
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Карточки товаров:</div>
+					<div
+						id="product-grid"
+						style="
+							display: flex;
+							flex-wrap: wrap;
+							gap: 15px;
+							justify-content: center;
+						"
+					>
+						<div
+							style="
+								flex: 1 1 200px;
+								background-color: white;
+								padding: 15px;
+								border-radius: 8px;
+								box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+							"
+						>
+							<div
+								style="
+									height: 100px;
+									background-color: var(--gray);
+									border-radius: 5px;
+									margin-bottom: 10px;
+								"
+							></div>
+							<h4>Товар 1</h4>
+							<p>Описание товара 1</p>
+							<div
+								style="
+									color: var(--secondary);
+									font-weight: bold;
+									margin-top: 5px;
+								"
+							>
+								$99
+							</div>
+						</div>
+						<div
+							style="
+								flex: 1 1 200px;
+								background-color: white;
+								padding: 15px;
+								border-radius: 8px;
+								box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+							"
+						>
+							<div
+								style="
+									height: 100px;
+									background-color: var(--gray);
+									border-radius: 5px;
+									margin-bottom: 10px;
+								"
+							></div>
+							<h4>Товар 2</h4>
+							<p>Описание товара 2</p>
+							<div
+								style="
+									color: var(--secondary);
+									font-weight: bold;
+									margin-top: 5px;
+								"
+							>
+								$149
+							</div>
+						</div>
+						<div
+							style="
+								flex: 1 1 200px;
+								background-color: white;
+								padding: 15px;
+								border-radius: 8px;
+								box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+							"
+						>
+							<div
+								style="
+									height: 100px;
+									background-color: var(--gray);
+									border-radius: 5px;
+									margin-bottom: 10px;
+								"
+							></div>
+							<h4>Товар 3</h4>
+							<p>Описание товара 3</p>
+							<div
+								style="
+									color: var(--secondary);
+									font-weight: bold;
+									margin-top: 5px;
+								"
+							>
+								$199
+							</div>
+						</div>
+					</div>
+					<div class="controls">
+						<button onclick="changeProductsLayout('row')">Строка</button>
+						<button onclick="changeProductsLayout('grid')" class="active">
+							Сетка
+						</button>
+					</div>
+				</div>
+
+				<h3>Пример 3: Центрирование элемента</h3>
+				<p>
+					Идеальное центрирование элемента как по горизонтали, так и по
+					вертикали:
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Центрирование элемента:</div>
+					<div
+						style="
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							background-color: var(--gray);
+							height: 200px;
+							border-radius: 8px;
+						"
+					>
+						<div
+							style="
+								background-color: var(--primary);
+								color: white;
+								padding: 20px;
+								border-radius: 5px;
+							"
+						>
+							Центрированный элемент
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section fade-in">
+				<h2>Свойства flex-элементов</h2>
+				<p>Основные свойства, применяемые непосредственно к flex-элементам:</p>
+
+				<div class="slider-wrapper">
+					<div class="slider">
+						<div class="slide">
+							<div class="slide-content">
+								<h3>flex-grow</h3>
+								<p>
+									Определяет способность элемента увеличиваться в размере при
+									наличии свободного места
+								</p>
+								<ul>
+									<li>Значение по умолчанию: 0</li>
+									<li>Принимает безразмерные числа</li>
+									<li>Распределение происходит пропорционально значениям</li>
+								</ul>
+								<div class="flex-example" style="height: 100px">
+									<div style="flex-grow: 1">1</div>
+									<div style="flex-grow: 2">2</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="slide">
+							<div class="slide-content">
+								<h3>order</h3>
+								<p>
+									Определяет порядок отображения элементов независимо от их
+									расположения в DOM
+								</p>
+								<ul>
+									<li>Значение по умолчанию: 0</li>
+									<li>Может быть отрицательным</li>
+									<li>Элементы сортируются по возрастанию order</li>
+								</ul>
+								<div class="flex-example" style="height: 100px">
+									<div style="order: 2">1 (order:2)</div>
+									<div style="order: 1">2 (order:1)</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="slide">
+							<div class="slide-content">
+								<h3>flex-shrink</h3>
+								<p>
+									Определяет способность элемента уменьшаться в размерах при
+									нехватке места
+								</p>
+								<ul>
+									<li>Значение по умолчанию: 1</li>
+									<li>Принимает безразмерные числа</li>
+									<li>0 запрещает сжатие элемента</li>
+								</ul>
+								<div class="flex-example" style="height: 100px">
+									<div style="flex-shrink: 0">1 (no shrink)</div>
+									<div style="flex-shrink: 2">2 (shrink x2)</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section fade-in">
+				<h2>Интерактивная песочница Flexbox</h2>
+				<p>
+					Попробуйте разные комбинации свойств Flexbox в интерактивной
+					песочнице:
+				</p>
+
+				<div class="demo-container">
+					<div class="demo-title">Flexbox песочница:</div>
+					<div class="flex-example" id="sandbox" style="min-height: 300px">
+						<div class="flex-item">1</div>
+						<div class="flex-item">2</div>
+						<div class="flex-item">3</div>
+						<div class="flex-item">4</div>
+						<div class="flex-item">5</div>
+					</div>
+
+					<div class="controls">
+						<div>
+							<h4>flex-direction:</h4>
+							<button
+								onclick="setSandboxProperty('flexDirection', 'row')"
+								class="active"
+							>
+								row
+							</button>
+							<button
+								onclick="setSandboxProperty('flexDirection', 'row-reverse')"
+							>
+								row-reverse
+							</button>
+							<button onclick="setSandboxProperty('flexDirection', 'column')">
+								column
+							</button>
+							<button
+								onclick="setSandboxProperty('flexDirection', 'column-reverse')"
+							>
+								column-reverse
+							</button>
+						</div>
+
+						<div>
+							<h4>justify-content:</h4>
+							<button
+								onclick="setSandboxProperty('justifyContent', 'flex-start')"
+								class="active"
+							>
+								flex-start
+							</button>
+							<button
+								onclick="setSandboxProperty('justifyContent', 'flex-end')"
+							>
+								flex-end
+							</button>
+							<button onclick="setSandboxProperty('justifyContent', 'center')">
+								center
+							</button>
+							<button
+								onclick="setSandboxProperty('justifyContent', 'space-between')"
+							>
+								space-between
+							</button>
+							<button
+								onclick="setSandboxProperty('justifyContent', 'space-around')"
+							>
+								space-around
+							</button>
+						</div>
+
+						<div>
+							<h4>align-items:</h4>
+							<button onclick="setSandboxProperty('alignItems', 'flex-start')">
+								flex-start
+							</button>
+							<button onclick="setSandboxProperty('alignItems', 'flex-end')">
+								flex-end
+							</button>
+							<button onclick="setSandboxProperty('alignItems', 'center')">
+								center
+							</button>
+							<button
+								onclick="setSandboxProperty('alignItems', 'stretch')"
+								class="active"
+							>
+								stretch
+							</button>
+							<button onclick="setSandboxProperty('alignItems', 'baseline')">
+								baseline
+							</button>
+						</div>
+
+						<div>
+							<h4>flex-wrap:</h4>
+							<button
+								onclick="setSandboxProperty('flexWrap', 'nowrap')"
+								class="active"
+							>
+								nowrap
+							</button>
+							<button onclick="setSandboxProperty('flexWrap', 'wrap')">
+								wrap
+							</button>
+							<button onclick="setSandboxProperty('flexWrap', 'wrap-reverse')">
+								wrap-reverse
+							</button>
+						</div>
+					</div>
+
+					<div>
+						<h4>Текущие значения:</h4>
+						<p>
+							flex-direction:
+							<span class="property-value" id="sandbox-flexdirection">row</span>
+						</p>
+						<p>
+							justify-content:
+							<span class="property-value" id="sandbox-justifycontent"
+								>flex-start</span
+							>
+						</p>
+						<p>
+							align-items:
+							<span class="property-value" id="sandbox-alignitems"
+								>stretch</span
+							>
+						</p>
+						<p>
+							flex-wrap:
+							<span class="property-value" id="sandbox-flexwrap">nowrap</span>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<div class="container">
+				<p>Интерактивный учебник по Flexbox &copy; 2025</p>
+			</div>
+		</footer>
+		<script src="./script.js"></script>
+	</body>
+</html>

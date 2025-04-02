@@ -1,0 +1,282 @@
+:root {
+	--primary: #4a6de5;
+	--primary-light: #6b8ff5;
+	--secondary: #ff5b7f;
+	--dark: #2e3440;
+	--light: #eceff4;
+	--gray: #e5e9f0;
+	--transition: all 0.3s ease;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: var(--light);
+	color: var(--dark);
+	line-height: 1.6;
+}
+
+header {
+	background: linear-gradient(135deg, var(--primary), var(--primary-light));
+	color: white;
+	text-align: center;
+	padding: 2rem 1rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	animation: fadeIn 1s ease;
+}
+
+h2 {
+	font-size: 1.8rem;
+	margin: 2rem 0 1rem;
+	color: var(--primary);
+	border-bottom: 2px solid var(--primary-light);
+	padding-bottom: 0.5rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+	margin: 1.5rem 0 0.8rem;
+	color: var(--dark);
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.section {
+	background-color: white;
+	border-radius: 10px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+	transition: var(--transition);
+}
+
+.section:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.demo-container {
+	background-color: var(--gray);
+	border-radius: 8px;
+	padding: 1.5rem;
+	margin: 1.5rem 0;
+	overflow: hidden;
+}
+
+.demo-title {
+	margin-bottom: 1rem;
+	font-weight: bold;
+	color: var(--primary);
+}
+
+.demo-box {
+	background-color: var(--primary-light);
+	color: white;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 5px;
+	text-align: center;
+	transition: var(--transition);
+}
+
+.controls {
+	margin: 1rem 0;
+	padding: 1rem;
+	background-color: var(--light);
+	border-radius: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+button {
+	background-color: var(--primary);
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: var(--transition);
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+button:hover {
+	background-color: var(--primary-light);
+	transform: translateY(-2px);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+  position: relative;
+	margin: 2rem 0;
+	padding: 1rem;
+	background: var(--gray);
+	border-radius: 10px;
+}
+
+.slide {
+	background: white;
+	border-radius: 8px;
+	padding: 2rem;
+	margin: 0 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content h3 {
+	color: var(--secondary);
+	margin-bottom: 1rem;
+}
+
+.tns-nav {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.tns-nav button {
+	background: var(--primary-light);
+	border: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin: 0 5px;
+	padding: 0;
+	transition: var(--transition);
+}
+
+.tns-nav .tns-nav-active {
+	background: var(--secondary);
+	transform: scale(1.2);
+}
+
+.tns-controls button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--primary);
+	padding: 10px;
+	z-index: 10;
+  border: none;
+  color: white;
+}
+
+.tns-controls button:first-child {
+	left: 10px;
+}
+
+.tns-controls button:last-child {
+	right: 10px;
+}
+
+button.active {
+	background-color: var(--secondary);
+}
+
+code {
+	background-color: var(--gray);
+	padding: 0.2rem 0.4rem;
+	border-radius: 4px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.flex-example {
+	display: flex;
+	background-color: white;
+	border: 2px dashed var(--primary);
+	border-radius: 8px;
+	min-height: 200px;
+	padding: 1rem;
+	transition: var(--transition);
+}
+
+.interactive-control {
+	margin: 1rem 0;
+}
+
+.property-value {
+	color: var(--secondary);
+	font-weight: bold;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	animation: fadeIn 0.5s ease;
+}
+
+footer {
+	text-align: center;
+	padding: 2rem;
+	background-color: var(--dark);
+	color: white;
+	margin-top: 3rem;
+}
+
+/* Для интерактивных элементов */
+.flex-item {
+	background-color: var(--primary-light);
+	color: white;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 5px;
+	text-align: center;
+	transition: var(--transition);
+	min-width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-item:hover {
+	transform: scale(1.05);
+	background-color: var(--secondary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	.controls {
+		flex-direction: column;
+	}
+
+	.section {
+		padding: 1.5rem;
+	}
+}
+
+
