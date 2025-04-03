@@ -14,10 +14,7 @@
 	<body>
 		<header>
 			<div class="container">
-				<h1>Интерактивный учебник по Flexbox</h1>
-				<p>
-					Создавайте современные, гибкие и отзывчивые макеты с помощью Flexbox
-				</p>
+				<h1>Flexbox</h1>
 			</div>
 		</header>
 
@@ -310,14 +307,6 @@
 							<div style="color: white; cursor: pointer">Контакты</div>
 						</div>
 					</div>
-					<div class="controls">
-						<button onclick="toggleNavMenu('space-between')">
-							space-between
-						</button>
-						<button onclick="toggleNavMenu('default')" class="active">
-							С отступом справа
-						</button>
-					</div>
 				</div>
 
 				<h3>Пример 2: Карточки товаров</h3>
@@ -466,7 +455,6 @@
 			<section class="section fade-in">
 				<h2>Свойства flex-элементов</h2>
 				<p>Основные свойства, применяемые непосредственно к flex-элементам:</p>
-
 				<div class="slider-wrapper">
 					<div class="slider">
 						<div class="slide">
@@ -476,18 +464,8 @@
 									Определяет способность элемента увеличиваться в размере при
 									наличии свободного места
 								</p>
-								<ul>
-									<li>Значение по умолчанию: 0</li>
-									<li>Принимает безразмерные числа</li>
-									<li>Распределение происходит пропорционально значениям</li>
-								</ul>
-								<div class="flex-example" style="height: 100px">
-									<div style="flex-grow: 1">1</div>
-									<div style="flex-grow: 2">2</div>
-								</div>
 							</div>
 						</div>
-
 						<div class="slide">
 							<div class="slide-content">
 								<h3>order</h3>
@@ -495,18 +473,8 @@
 									Определяет порядок отображения элементов независимо от их
 									расположения в DOM
 								</p>
-								<ul>
-									<li>Значение по умолчанию: 0</li>
-									<li>Может быть отрицательным</li>
-									<li>Элементы сортируются по возрастанию order</li>
-								</ul>
-								<div class="flex-example" style="height: 100px">
-									<div style="order: 2">1 (order:2)</div>
-									<div style="order: 1">2 (order:1)</div>
-								</div>
 							</div>
 						</div>
-
 						<div class="slide">
 							<div class="slide-content">
 								<h3>flex-shrink</h3>
@@ -514,15 +482,6 @@
 									Определяет способность элемента уменьшаться в размерах при
 									нехватке места
 								</p>
-								<ul>
-									<li>Значение по умолчанию: 1</li>
-									<li>Принимает безразмерные числа</li>
-									<li>0 запрещает сжатие элемента</li>
-								</ul>
-								<div class="flex-example" style="height: 100px">
-									<div style="flex-shrink: 0">1 (no shrink)</div>
-									<div style="flex-shrink: 2">2 (shrink x2)</div>
-								</div>
 							</div>
 						</div>
 					</div>

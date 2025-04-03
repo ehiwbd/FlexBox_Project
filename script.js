@@ -8,6 +8,7 @@ const slider = tns({
 	nav: true,
 	navPosition: 'bottom',
 	controlsText: ['‹', '›'],
+	center: true,
 	responsive: {
 		768: {
 			items: 1,
